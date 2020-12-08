@@ -6,6 +6,19 @@ Para soluções em Java, um JAR file (arquivo jar) deve ser gerado. Para gerar o
 IDE Eclipse, basta clicar com o botão direito do mouse e escolher a opção “Export...”. Indique
 a pasta do projeto e o nome do arquivo a ser gerado; O arquivo jar pode ser executado do
 terminal através do comando: java -jar <nomeDoArquivo>
+
+A Lei nº 10.048/00 conferiu atendimento prioritário a determinado grupo de pessoas, o
+que foi regulamentado pelo Decreto nº 5.296/04, sendo também estabelecidas prioridades
+pela Lei nº 12.008/09, e, no que se refere especificamente às pessoas idosas, pela Lei nº
+10.741/03 (Estatuto do Idoso).
+O artigo 1º da Lei nº 10.048/00 passou a ter nova redação após o advento do Estatuto do
+Idoso, como se vê adiante: “As pessoas portadoras de deficiência, os idosos com idade
+igual ou superior a 60 (sessenta) anos, as gestantes, as lactantes e as pessoas
+acompanhadas por crianças de colo terão atendimento prioritário, nos termos desta lei”.
+Estão obrigadas a dispensar atendimento prioritário as repartições públicas e empresas
+concessionárias de serviços públicos, além das instituições financeiras, o que se dará por
+meio de serviços individualizados que assegurem tratamento diferenciado e atendimento
+imediato, conforme o disposto no art. 2º, caput e parágrafo único, da Lei nº 10.048/00.
   
 1. Implementar um Tipo Abstrato de Dados (ADT) do tipo Fila com Prioridades,
 usando lista encadeada para controlar o atendimento de pessoas em uma empresa ou
