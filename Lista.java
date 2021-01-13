@@ -1,6 +1,6 @@
 package atividadepatrica2;
 
-public class Lista {
+public class Lista <Chave>{
     private No inicio;
     private No fim;
     private int tam=0;
@@ -13,7 +13,7 @@ public class Lista {
     }
 
     //metodo adiciona
-    public void add(char chave, String valor) {
+    public void add(Chave chave, String valor) {
         //Criando novo elemento no inicio
         No novo = new No();
 
@@ -38,7 +38,7 @@ public class Lista {
         }
     }
     
-    public String imprime(char chave){
+    public String imprime(Chave chave){
         No aux = pesquisa(chave);
         
         if(aux.chave==chave){
@@ -48,7 +48,7 @@ public class Lista {
         }
     }
     
-    public No pesquisa(char chave){
+    public No pesquisa(Chave chave){
         No n=inicio.getProximo();
             
         while(n != null){                            
