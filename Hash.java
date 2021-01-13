@@ -9,7 +9,8 @@ package atividadepatrica2;
  *
  * @author Larissa Brasil
  */
-public class Hash {
+public class Hash<Chave> {
+    int M;
     Lista vetor[];
 
     public Hash() {
@@ -23,15 +24,15 @@ public class Hash {
         }
     }
     //calcula valor hash
-    final public int hash(char chave){
-        return Character.hashCode(chave);
+    final public int hash(Chave chave){          
+        return (chave.hashCode() & 0x7fffffff) % M; 
     }
     
-    final void put(char chave,String valor){
+    final void put(Chave chave,String valor){
         vetor[hash(chave)].add(chave, valor);
     }    
     
-    public String get(char chave){
+    public String get(Chave chave){
         return vetor[hash(chave)].imprime(chave);
     }    
 }

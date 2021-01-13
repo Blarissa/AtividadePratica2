@@ -1,8 +1,8 @@
 package atividadepatrica2;
 
-public class No {
+public class No<Chave>{
 
-    char chave;
+    Chave chave;
     String valor;
     No proximo;
 
@@ -10,11 +10,11 @@ public class No {
         
     }
 
-    public char getChave() {
+    public Chave getChave() {
         return chave;
     }
 
-    public void setChave(char chave) {
+    public void setChave(Chave chave) {
         this.chave = chave;
     }
 
