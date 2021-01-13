@@ -19,34 +19,33 @@ public class AtividadePatrica2 {
      */
     public static void main(String[] args) throws IOException {
         
-        Hash hash= new Hash();
+         
+        Hash<Character> hash= new Hash();
         ArrayList<String> palavras = new ArrayList<>();
+        ArrayList<String> palavrasSeparadas = new ArrayList<>();
+        
         ManipuladorDeArquivo arquivo = new ManipuladorDeArquivo();
         String palavra = "";
 
         palavras = arquivo.ler("C:\\Users\\Larissa Brasil\\Documents\\UFPI\\ED\\AtividadePatrica2"
                 + "\\src\\atividadepatrica2\\tale.txt");
-        int chave = 0;
-
-        for (int i = 0; i < palavras.size(); i++) {
+        
+        hash.M=100;
+                
+        for (int i = 0; i < palavras.size(); i++) {            
             for (int j = 0; j < palavras.get(i).length(); j++) {
-                if (palavras.get(i).charAt(j) != ' ' && palavras.get(i).charAt(j) != '.'
-                        && palavras.get(i).charAt(j) != ',' && palavras.get(i).charAt(j) != ':'
-                        && palavras.get(i).charAt(j) != ';' && palavras.get(i).charAt(j) != '*'
-                        && palavras.get(i).charAt(j) != '"' && palavras.get(i).charAt(j) != '-'
-                        && palavras.get(i).charAt(j) != '[' && palavras.get(i).charAt(j) != ']'
-                        && palavras.get(i).charAt(j) != '_') {
+                if (palavras.get(i).charAt(j) != ' ') {
                     palavra += String.valueOf(palavras.get(i).charAt(j));
-                } else {
-                    palavra.replace("[:punct]", "");
-                    //  st.put(palavra.charAt(0), palavra);    
+                } else{                    
+                    //lista.add(palavra.charAt(0), palavra);   
+                    palavra=palavra.replaceAll("[:punct:]", "");                
+                    System.out.println("\n"+palavra);
                     hash.put(palavra.charAt(0), palavra);                    
-                    palavra = "";
-                    //chave++;
+                    palavra = "";                    
                 }
             }
         }
         
-        hash.get('a');
+        System.out.println("\n"+hash.get('a'));
     }
 }

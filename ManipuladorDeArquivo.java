@@ -27,10 +27,12 @@ public class ManipuladorDeArquivo {
         BufferedReader buffRead = new BufferedReader(new FileReader(path));
         String linha = "";
         ArrayList<String> palavras = new ArrayList<>();
-        
+        int i =0;
         while (true) {
-            if (linha != null) {                
+            if (linha != null) {                                   
+                linha= linha.toLowerCase();
                 palavras.add(linha);
+                i++;
             } else {
                 break;
             }            
